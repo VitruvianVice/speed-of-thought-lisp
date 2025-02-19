@@ -488,6 +488,7 @@ If `speed-of-thought-mode' is already on, call ON."
 (define-minor-mode sotlisp-mode
   "Local mode for editing Lisp at the speed of thought."
   :lighter " SoT"
+  :keymap
   `(([M-return] . sotlisp-newline-and-parentheses)
     ([C-return] . sotlisp-downlist-newline-and-parentheses)
     (,(kbd "C-M-;") . ,(if (fboundp 'comment-or-uncomment-sexp)
